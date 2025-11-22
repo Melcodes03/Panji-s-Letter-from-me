@@ -1,0 +1,106 @@
+<!-- style.css -->
+padding: 0;
+font-family: 'Nexa', 'Poppins', sans-serif;
+background: #f3f6ff;
+color: #0016a8;
+overflow-x: hidden;
+}
+
+
+/* Floating Blobs */
+.blob {
+position: fixed;
+width: 300px;
+height: 300px;
+background: radial-gradient(circle at 30% 30%, #ff8c00, #0016a8);
+filter: blur(60px);
+opacity: 0.35;
+z-index: -1;
+border-radius: 50%;
+animation: float 8s ease-in-out infinite;
+}
+
+
+.blob1 { top: -60px; left: -40px; }
+.blob2 { bottom: -60px; right: -40px; animation-delay: 3s; }
+
+
+@keyframes float {
+0% { transform: translateY(0); }
+50% { transform: translateY(-25px); }
+100% { transform: translateY(0); }
+}
+
+
+/* Card Container */
+.container {
+max-width: 600px;
+margin: 100px auto;
+background: white;
+padding: 40px;
+border-radius: 30px;
+box-shadow: 0 10px 30px rgba(0, 22, 168, 0.15);
+text-align: center;
+border: 3px solid #ff8c00;
+}
+
+
+/* Gradient Header */
+.header-gradient {
+font-family: 'LEMON MILK', sans-serif;
+font-size: 2.4em;
+padding: 15px;
+background: linear-gradient(90deg, #0016a8, #ff8c00);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-bottom: 25px;
+}
+
+
+p {
+font-size: 1.1em;
+line-height: 1.7;
+color: #333;
+}
+
+
+.button {
+display: inline-block;
+padding: 14px 30px;
+background: #0016a8;
+color: white;
+border-radius: 14px;
+text-decoration: none;
+font-weight: 600;
+transition: 0.3s;
+border: 2px solid #ff8c00;
+}
+
+
+.button:hover {
+background: #ff8c00;
+color: #0016a8;
+}
+
+
+/* Animations */
+.fade-in {
+animation: fade 1s ease forwards;
+opacity: 0;
+}
+
+
+@keyframes fade {
+to { opacity: 1; }
+}
+
+
+.slide-in {
+animation: slide 1s ease;
+}
+
+
+@keyframes slide {
+from { transform: translateY(15px); opacity: 0; }
+to { transform: translateY(0); opacity: 1; }
+}
